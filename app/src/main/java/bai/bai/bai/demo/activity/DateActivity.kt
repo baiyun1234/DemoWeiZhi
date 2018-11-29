@@ -16,6 +16,7 @@ class DateActivity : Activity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_date)
 
+        btn_date_current.setOnClickListener(this)
         btn_date_0.setOnClickListener(this)
         btn_date_8.setOnClickListener(this)
         btn_date_is_same.setOnClickListener(this)
@@ -24,6 +25,10 @@ class DateActivity : Activity(), View.OnClickListener {
 
     override fun onClick(v: View?) {
         when (v!!.id) {
+
+            R.id.btn_date_current -> {
+                getTimeCurrent()
+            }
 
             R.id.btn_date_0 -> {
                 getGMTTime()
@@ -63,7 +68,7 @@ class DateActivity : Activity(), View.OnClickListener {
         sdf.timeZone = TimeZone.getTimeZone("GMT")
         val dataStr = sdf.format(Date())
         val data1 = sdf.parse(dataStr)
-        Log.d("baibai", "零时区时间 ：$dataStr, 秒数是 : ${data1.time}")
+        Log.d("baibai", "零时区时间 ：$dataStr, data1 = $data1,  秒数是 : ${data1.time}")
     }
 
     /**
@@ -74,7 +79,18 @@ class DateActivity : Activity(), View.OnClickListener {
         sdf.timeZone = TimeZone.getTimeZone("GMT+08")
         val dataStr = sdf.format(Date())
         val data1 = sdf.parse(dataStr)
-        Log.d("baibai", "东八区时间 ：$dataStr, 秒数是 : ${data1.time}")
+        Log.d("baibai", "东八区时间 ：$dataStr, data1 = $data1, 秒数是 : ${data1.time}")
+    }
+
+    /**
+     * 获取当地时间
+     */
+    private fun getTimeCurrent() {
+        val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault())
+//        sdf.timeZone = TimeZone.getTimeZone("GMT+08")
+        val dataStr = sdf.format(Date())
+        val data1 = sdf.parse(dataStr)
+        Log.d("baibai", "当地时间 ：$dataStr, data1 = $data1, 秒数是 : ${data1.time}")
     }
 
     /**

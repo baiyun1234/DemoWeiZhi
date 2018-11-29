@@ -37,6 +37,7 @@ class ChooseActivity : Activity(), View.OnClickListener {
         btn_choose_client.setOnClickListener(this)
         btn_choose_date.setOnClickListener(this)
         btn_choose_rxjava.setOnClickListener(this)
+        btn_choose_time_zone.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -76,6 +77,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_rxjava -> {
                 startActivity(Intent(this, RxjavaActivity::class.java))
+            }
+
+            R.id.btn_choose_time_zone -> {
+                startActivity(Intent(this, TimeZoneActivity::class.java))
             }
 
         }
