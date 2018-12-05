@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#6f30"
     tools:context=".activity.ViewTestActivity">
 
     <ImageView
         android:id="@+id/iv_test"
         android:layout_width="200dp"
-        android:visibility="gone"
         android:layout_height="100dp"
-        android:background="#f30" />
+        android:background="@mipmap/base_loading_icon"
+        android:visibility="visible" />
 
     <bai.bai.bai.demo.view.SlideLinearLayout
         android:layout_width="match_parent"
-        android:background="#333"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_height="wrap_content"/>
+        android:background="#333"
+        android:visibility="gone" />
 
 </RelativeLayout>
