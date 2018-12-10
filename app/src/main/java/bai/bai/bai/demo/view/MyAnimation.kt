@@ -4,10 +4,7 @@ import android.graphics.Camera
 import android.graphics.Matrix
 import android.os.Parcel
 import android.os.Parcelable
-import android.view.animation.Animation
-import android.view.animation.DecelerateInterpolator
-import android.view.animation.LinearInterpolator
-import android.view.animation.Transformation
+import android.view.animation.*
 
 class MyAnimation : Animation {
 
@@ -16,13 +13,25 @@ class MyAnimation : Animation {
     val ROTATE_AXIS_Y = "Y"
     val ROTATE_AXIS_Z = "Z"
 
-    private var mRotateAxis: String
+    private var mRotateAxis: String//旋转中心轴
+    private var mInterpolator: Interpolator//插值器
+    private var mDegrees: Int//旋转角度
+    private val mDuration: Long
     private var centerX: Int = 0
     private var centerY: Int = 0
     private var camera = Camera()
 
-    constructor(axis: String = "Y") {
+    /**
+     * 默认绕Y轴顺时针线性旋转360度，时间为1000毫秒
+     */
+    constructor(axis: String = "Y"
+                , duretion: Long = 1000
+                , interpolator: Interpolator = LinearInterpolator()
+                , degrees: Int = -360) {
         mRotateAxis = axis
+        mInterpolator = interpolator
+        mDuration = duretion
+        mDegrees = degrees
     }
 
     override fun initialize(width: Int, height: Int, parentWidth: Int, parentHeight: Int) {
@@ -30,9 +39,9 @@ class MyAnimation : Animation {
         //获取中心点坐标
         centerX = width / 2
         centerY = height / 2
-        //动画执行时间  自行定义
         repeatCount = Animation.INFINITE
-        interpolator = LinearInterpolator()
+        duration = mDuration
+        interpolator = mInterpolator
     }
 
     override fun applyTransformation(interpolatedTime: Float, t: Transformation) {
@@ -40,9 +49,9 @@ class MyAnimation : Animation {
         camera.save()
         //中心是绕Y轴旋转  这里可以自行设置X轴 Y轴 Z轴
         when (mRotateAxis) {
-            ROTATE_AXIS_X -> camera.rotateX(360 * interpolatedTime)
-            ROTATE_AXIS_Y -> camera.rotateY(360 * interpolatedTime)
-            ROTATE_AXIS_Z -> camera.rotateZ(360 * interpolatedTime)
+            ROTATE_AXIS_X -> camera.rotateX(mDegrees * interpolatedTime)
+            ROTATE_AXIS_Y -> camera.rotateY(mDegrees * interpolatedTime)
+            ROTATE_AXIS_Z -> camera.rotateZ(mDegrees * interpolatedTime)
         }
         //把我们的摄像头加在变换矩阵上
         camera.getMatrix(matrix)
