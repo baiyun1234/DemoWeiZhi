@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.View
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.systembar.SystemBarTintManager
-//import com.readystatesoftware.systembartint.SystemBarTintManager
 import kotlinx.android.synthetic.main.activity_choose.*
 
 class ChooseActivity : Activity(), View.OnClickListener {
@@ -16,14 +15,22 @@ class ChooseActivity : Activity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose)
 
+        setStatusBar()
+        initData()
+        initListener()
+
+    }
+
+    private fun setStatusBar() {
         // 创建状态栏的管理实例
         val tintManager = SystemBarTintManager(this)
         // 激活状态栏设置
         tintManager.isStatusBarTintEnabled = true
         // 设置一个颜色给系统栏
         tintManager.setStatusBarTintColor(resources.getColor(R.color.base_action_bar_bg))
+    }
 
-        initListener()
+    private fun initData() {
 
     }
 
@@ -34,10 +41,11 @@ class ChooseActivity : Activity(), View.OnClickListener {
         btn_choose_java.setOnClickListener(this)
         btn_choose_view.setOnClickListener(this)
         btn_choose_assets_file.setOnClickListener(this)
-        btn_choose_client.setOnClickListener(this)
+        btn_choose_retrofit.setOnClickListener(this)
         btn_choose_date.setOnClickListener(this)
         btn_choose_rxjava.setOnClickListener(this)
         btn_choose_time_zone.setOnClickListener(this)
+        btn_choose_eventbus.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -67,7 +75,7 @@ class ChooseActivity : Activity(), View.OnClickListener {
                 startActivity(Intent(this, AssetsFileActivity::class.java))
             }
 
-            R.id.btn_choose_client -> {
+            R.id.btn_choose_retrofit -> {
                 startActivity(Intent(this, RetrofitActivity::class.java))
             }
 
@@ -81,6 +89,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_time_zone -> {
                 startActivity(Intent(this, TimeZoneActivity::class.java))
+            }
+
+            R.id.btn_choose_eventbus -> {
+                startActivity(Intent(this, EventBusPullActivity::class.java))
             }
 
         }

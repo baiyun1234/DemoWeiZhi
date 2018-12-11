@@ -49,6 +49,13 @@
         android:layout_height="wrap_content"
         android:text="获取时间" />
 
+
+    <Button
+        android:id="@+id/btn_choose_time_zone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="城市与时区" />
+
     <Button
         android:id="@+id/btn_choose_rxjava"
         android:layout_width="match_parent"
@@ -56,15 +63,16 @@
         android:text="RxJava" />
 
     <Button
-        android:id="@+id/btn_choose_client"
+        android:id="@+id/btn_choose_retrofit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="网络请求" />
+        android:text="Retrofit" />
 
     <Button
-        android:id="@+id/btn_choose_time_zone"
+        android:id="@+id/btn_choose_eventbus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="城市与时区" />
+        android:text="EventBus" />
+
 
 </LinearLayout>  

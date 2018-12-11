@@ -50,7 +50,9 @@
         <activity android:name=".activity.RetrofitActivity" />
         <activity android:name=".activity.DateActivity" />
         <activity android:name=".activity.RxjavaActivity" />
-        <activity android:name=".activity.TimeZoneActivity"></activity>
+        <activity android:name=".activity.TimeZoneActivity" />
+        <activity android:name=".activity.EventBusPullActivity" />
+        <activity android:name=".activity.EventBusPushActivity"></activity>
     </application>
 
 </manifest>
