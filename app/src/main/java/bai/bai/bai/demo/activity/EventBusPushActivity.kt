@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_event_bus_push.*
 import org.greenrobot.eventbus.EventBus
 
 /**
- * EventBus接受事件的一方，要注册和解注册
+ * EventBus发送事件的一方，只负责发事件，主要的是实体类得注意，要是相同的，相当于是根据实体类进行筛选
  */
 class EventBusPushActivity : Activity() {
 

@@ -11,6 +11,9 @@ import kotlinx.android.synthetic.main.activity_event_bus_pull.*
 import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 
+/**
+ * EventBus接受事件的一方，要注册和解注册
+ */
 class EventBusPullActivity : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
