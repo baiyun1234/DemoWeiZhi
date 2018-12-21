@@ -33,12 +33,15 @@
             android:name="com.young.adaptive.designHeight"
             android:value="1280" />
 
-        <activity android:name=".activity.MainActivity" />
-        <activity android:name=".activity.LoginActivity" />
-        <activity android:name=".activity.ViewTestActivity" />
-        <activity android:name=".activity.JavaViewTestActivity" />
-        <activity android:name=".activity.LocationActivity" />
-        <activity android:name=".activity.IpActivity" />
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".service.MyIntentService"
+            android:exported="false" />
+
         <activity android:name=".activity.ChooseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -46,13 +49,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.ViewTestActivity" />
+        <activity android:name=".activity.JavaViewTestActivity" />
+        <activity android:name=".activity.LocationActivity" />
+        <activity android:name=".activity.IpActivity" />
         <activity android:name=".activity.AssetsFileActivity" />
         <activity android:name=".activity.RetrofitActivity" />
         <activity android:name=".activity.DateActivity" />
         <activity android:name=".activity.RxjavaActivity" />
         <activity android:name=".activity.TimeZoneActivity" />
         <activity android:name=".activity.EventBusPullActivity" />
-        <activity android:name=".activity.EventBusPushActivity"></activity>
+        <activity android:name=".activity.EventBusPushActivity" />
+        <activity android:name=".activity.ServiceActivity" />
+
     </application>
 
 </manifest>

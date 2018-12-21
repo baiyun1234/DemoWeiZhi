@@ -3,76 +3,106 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
-    android:orientation="vertical">
+    android:background="@drawable/login_bg">
 
-    <Button
-        android:id="@+id/btn_choose_snap_pay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="SnapPay项目" />
-
-    <Button
-        android:id="@+id/btn_choose_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="获取经纬度" />
-
-    <Button
-        android:id="@+id/btn_choose_ip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="获取ip地址" />
-
-    <Button
-        android:id="@+id/btn_choose_java"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="测试" />
-
-    <Button
-        android:id="@+id/btn_choose_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="view测试" />
-
-    <Button
-        android:id="@+id/btn_choose_assets_file"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="打开assets文件" />
-
-    <Button
-        android:id="@+id/btn_choose_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="获取时间" />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/btn_choose_time_zone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="城市与时区" />
+        <Button
+            android:id="@+id/btn_choose_snap_pay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="SnapPay项目" />
 
-    <Button
-        android:id="@+id/btn_choose_rxjava"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="RxJava" />
+        <Button
+            android:id="@+id/btn_choose_location"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="获取经纬度" />
 
-    <Button
-        android:id="@+id/btn_choose_retrofit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Retrofit" />
+        <Button
+            android:id="@+id/btn_choose_ip"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="获取ip地址" />
 
-    <Button
-        android:id="@+id/btn_choose_eventbus"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EventBus" />
+        <Button
+            android:id="@+id/btn_choose_java"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="测试" />
 
+        <Button
+            android:id="@+id/btn_choose_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="view测试" />
+
+        <Button
+            android:id="@+id/btn_choose_assets_file"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="打开assets文件" />
+
+        <Button
+            android:id="@+id/btn_choose_date"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="获取时间" />
+
+
+        <Button
+            android:id="@+id/btn_choose_time_zone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="城市与时区" />
+
+        <Button
+            android:id="@+id/btn_choose_rxjava"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="RxJava" />
+
+        <Button
+            android:id="@+id/btn_choose_retrofit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Retrofit" />
+
+        <Button
+            android:id="@+id/btn_choose_eventbus"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="EventBus" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_choose_service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="服务" />
+
+    </LinearLayout>
 
 </LinearLayout>  
