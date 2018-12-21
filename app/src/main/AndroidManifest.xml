@@ -42,6 +42,8 @@
             android:name=".service.MyIntentService"
             android:exported="false" />
 
+        <receiver android:name=".broadcast.MyBroadcast"/>
+
         <activity android:name=".activity.ChooseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
