@@ -47,6 +47,7 @@ class ChooseActivity : Activity(), View.OnClickListener {
         btn_choose_time_zone.setOnClickListener(this)
         btn_choose_eventbus.setOnClickListener(this)
         btn_choose_service.setOnClickListener(this)
+        btn_choose_fragment.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -98,6 +99,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_service -> {
                 startActivity(Intent(this, ServiceActivity::class.java))
+            }
+
+            R.id.btn_choose_fragment -> {
+                startActivity(Intent(this, MyFragmentActivity::class.java))
             }
 
         }

@@ -103,6 +103,12 @@
             android:layout_height="wrap_content"
             android:text="服务" />
 
+        <Button
+            android:id="@+id/btn_choose_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="fragment" />
+
     </LinearLayout>
 
 </LinearLayout>  

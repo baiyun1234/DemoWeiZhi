@@ -37,12 +37,11 @@
             android:name=".service.MyService"
             android:enabled="true"
             android:exported="true" />
-
         <service
             android:name=".service.MyIntentService"
             android:exported="false" />
 
-        <receiver android:name=".broadcast.MyBroadcast"/>
+        <receiver android:name=".broadcast.MyBroadcast" />
 
         <activity android:name=".activity.ChooseActivity">
             <intent-filter>
@@ -51,7 +50,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.LoginActivity" />
         <activity android:name=".activity.ViewTestActivity" />
@@ -66,7 +64,7 @@
         <activity android:name=".activity.EventBusPullActivity" />
         <activity android:name=".activity.EventBusPushActivity" />
         <activity android:name=".activity.ServiceActivity" />
-
+        <activity android:name=".activity.MyFragmentActivity" />
     </application>
 
 </manifest>
