@@ -29,7 +29,6 @@ class MyFragmentActivity : FragmentActivity()
         setContentView(R.layout.activity_my_fragment)
 
 
-
 //        initFragment()
 //        initListener()
 
@@ -68,7 +67,7 @@ class MyFragmentActivity : FragmentActivity()
     //endregion
 
     //region 纯代码添加、隐藏fragment
-    private fun initFragment2(){
+    private fun initFragment2() {
         mFragment1 = Fragment1.newInstance("bai", "yun")
         mFragment2 = Fragment2.newInstance("bai", "yun")
         mFragmentTransaction = supportFragmentManager.beginTransaction()
@@ -76,7 +75,7 @@ class MyFragmentActivity : FragmentActivity()
         mFragmentTransaction.commit()
     }
 
-    private fun initListener2(){
+    private fun initListener2() {
         btn_show_or_hide.setOnClickListener {
             val sfm = supportFragmentManager.beginTransaction()
 //            sfm.hide(supportFragmentManager.findFragmentByTag("fragment111"))
@@ -91,7 +90,7 @@ class MyFragmentActivity : FragmentActivity()
     //endregion
 
     //region xml添加，代码隐藏
-    private fun initListener3(){
+    private fun initListener3() {
 //        btn_show_or_hide.setOnClickListener {
 //            val ft = supportFragmentManager.beginTransaction()
 //            ft.hide(supportFragmentManager.findFragmentById(R.id.fragment_1))
@@ -100,11 +99,18 @@ class MyFragmentActivity : FragmentActivity()
     }
     //endregion
 
-
-
     override fun onFragmentInteraction222(string: String) {
-        Log.d("baibai", "onFragmentInteraction222")
-        Log.d("baibai", string)
+//        Log.d("baibai", "onFragmentInteraction222")
+//        Log.d("baibai", string)
+
+        val sfm = supportFragmentManager.beginTransaction()
+//        sfm.hide(supportFragmentManager.findFragmentByTag("fragment222"))
+//        sfm.add(R.id.ll_fragment, mFragment1, "fragment111")
+
+        //添加fragment时可以add也可以replace，add切换fragment时不会重新创建，是什么样子切换回来还是什么样子；用replace的效果就是：切换fragment时每次都会重新创建初始化。
+        sfm.replace(R.id.ll_fragment, mFragment1, "fragment111")
+        sfm.addToBackStack(null)//添加到fragmentManager的BackStack中，与之对应的是popBackStack()
+        sfm.commit()
     }
 
     override fun onFragmentInteraction(uri: Uri) {
