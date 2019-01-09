@@ -21,4 +21,10 @@
         android:background="#333"
         android:visibility="gone" />
 
+    <Button
+        android:id="@+id/btn_snackbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我是按钮"/>
+
 </RelativeLayout>

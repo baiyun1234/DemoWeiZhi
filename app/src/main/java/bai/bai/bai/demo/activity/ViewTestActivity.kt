@@ -5,11 +5,13 @@ import android.content.Context
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.view.animation.*
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.anim.MyInterpolator
 import bai.bai.bai.demo.view.MyAnimation
 import bai.bai.bai.demo.view.RotateYAnim
+import bai.bai.bai.demo.view.SnackbarManager
 import kotlinx.android.synthetic.main.activity_view_test.*
 
 /**
@@ -25,7 +27,12 @@ class ViewTestActivity : AppCompatActivity() {
         setContentView(R.layout.activity_view_test)
 
 //        iv_test.startAnimation(rotateAnim(this, R.anim.base_loading))
-        rotateAnim2()
+//        rotateAnim2()
+
+        btn_snackbar.setOnClickListener {
+            SnackbarManager.snackbar(iv_test.parent as View, "我是text")
+        }
+
     }
 
     /**
