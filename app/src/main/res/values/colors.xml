@@ -9,4 +9,9 @@
 
     <color name="base_action_bar_bg">#071830</color>//标题栏背景
 
+    <!--日期选择器-->
+    <color name="picker_select">#f30</color>
+    <color name="picker_unselected">#3f0</color>
+    <color name="picker_bg">#fff</color>
+
 </resources>

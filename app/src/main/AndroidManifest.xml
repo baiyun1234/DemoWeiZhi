@@ -65,6 +65,7 @@
         <activity android:name=".activity.EventBusPushActivity" />
         <activity android:name=".activity.ServiceActivity" />
         <activity android:name=".activity.MyFragmentActivity" />
+        <activity android:name=".activity.TimeDatePickerActivity"/>
     </application>
 
 </manifest>

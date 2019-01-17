@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/picker_select"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="选中日期"
+            android:textColor="@color/picker_unselected"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectDate"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/login_input_line"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="当前日期"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/currentDate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textColor="#f30"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/picker_select"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="选中时间"
+            android:textColor="@color/picker_unselected"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/selectTime"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/login_input_line"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="当前时间"
+            android:textColor="@color/colorAccent"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:gravity="center"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:textColor="#f30"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>  
