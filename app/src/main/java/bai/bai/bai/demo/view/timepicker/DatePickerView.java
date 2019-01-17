@@ -1,6 +1,5 @@
 package bai.bai.bai.demo.view.timepicker;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -62,9 +61,23 @@ public class DatePickerView extends View {
     private Timer timer;
     private MyTimerTask mTask;
 
-    private Handler updateHandler = new Handler() {
+    /**
+     * 为什么不用new Handler(){} ,而要用new Handler(new Handler.Callbace(){})？，
+     * 如果不用这个会报黄（@SuppressLint(“HandlerLeak”) ）,出现这种情况的原因如下:
+     *
+     * Handler在Android中用于消息的发送与异步处理，常常在Activity中作为一个匿名内部类来定义，
+     * 此时Handler会隐式地持有一个外部类对象（通常是一个Activity）的引用。
+     * 当Activity已经被用户关闭时，由于Handler持有Activity的引用造成Activity无法被GC回收，这样容易造成内存泄露。
+     * 比如：handler.postDelayed(rannable, 3000),3s后执行某个任务，在此过程中activity销毁了
+     *
+     * --解决方案一：将其定义成一个静态内部类（此时不会持有外部类对象的引用），在构造方法中传入Activity并对Activity对象增加一个弱引用，
+     * 这样Activity被用户关闭之后，即便异步消息还未处理完毕，Activity也能够被GC回收，从而避免了内存泄露。
+     *
+     * --解决方案二：不用new Handler(){} ,而要用new Handler(new Handler.Callbace(){})
+     */
+    private Handler updateHandler = new Handler(new Handler.Callback() {
         @Override
-        public void handleMessage(Message msg) {
+        public boolean handleMessage(Message msg) {
             if (Math.abs(mMoveLen) < SPEED) {
                 mMoveLen = 0;
                 if (mTask != null) {
@@ -77,10 +90,9 @@ public class DatePickerView extends View {
                 mMoveLen = mMoveLen - mMoveLen / Math.abs(mMoveLen) * SPEED;
             }
             invalidate();
+            return false;
         }
-    };
-
-
+    });
 
     public DatePickerView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -315,7 +327,7 @@ public class DatePickerView extends View {
     class MyTimerTask extends TimerTask {
         Handler handler;
 
-        public MyTimerTask(Handler handler) {
+        MyTimerTask(Handler handler) {
             this.handler = handler;
         }
 
