@@ -49,6 +49,7 @@ class ChooseActivity : Activity(), View.OnClickListener {
         btn_choose_service.setOnClickListener(this)
         btn_choose_fragment.setOnClickListener(this)
         btn_choose_time_data_picker.setOnClickListener(this)
+        btn_choose_calendar.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -108,6 +109,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_time_data_picker -> {
                 startActivity(Intent(this, TimeDatePickerActivity::class.java))
+            }
+
+            R.id.btn_choose_calendar -> {
+                startActivity(Intent(this, CalendarActivity::class.java))
             }
 
         }

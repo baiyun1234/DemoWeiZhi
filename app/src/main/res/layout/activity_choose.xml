@@ -113,7 +113,13 @@
             android:id="@+id/btn_choose_time_data_picker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TimeDataPicker" />
+            android:text="时间选择器" />
+
+        <Button
+            android:id="@+id/btn_choose_calendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="日历" />
 
     </LinearLayout>
 
