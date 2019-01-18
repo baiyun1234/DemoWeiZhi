@@ -460,6 +460,43 @@ public class CalendarView extends FrameLayout {
         mYearViewPager.scrollToYear(mDelegate.getCurrentDay().getYear(), smoothScroll);
     }
 
+    //baiyy start
+
+    /**
+     * 滚动到前一天
+     */
+    public void scrollToPreviousDay() {
+        scrollToPreviousDay(false);
+    }
+
+    /**
+     * 滚动到前一天
+     *
+     * @param smoothScroll 换页的时候是否滑动
+     */
+    public void scrollToPreviousDay(boolean smoothScroll) {
+        mDelegate.mSelectedCalendar = CalendarUtil.getPreCalendar(mDelegate.mSelectedCalendar);
+        scrollToSelectCalendar(smoothScroll);
+    }
+
+    /**
+     * 滚动到后一天
+     */
+    public void scrollToNextDay() {
+        scrollToNextDay(false);
+    }
+
+    /**
+     * 滚动到后一天
+     *
+     * @param smoothScroll 换页的时候是否滑动
+     */
+    public void scrollToNextDay(boolean smoothScroll) {
+        mDelegate.mSelectedCalendar = CalendarUtil.getNextCalendar(mDelegate.mSelectedCalendar);
+        scrollToSelectCalendar(smoothScroll);
+    }
+
+    //baiyy end
 
     /**
      * 滚动到下一个月
@@ -510,13 +547,22 @@ public class CalendarView extends FrameLayout {
      * 滚动到选择的日历
      */
     public void scrollToSelectCalendar() {
+        scrollToSelectCalendar(false);
+    }
+
+    /**
+     * 滚动到选择的日历
+     *
+     * @param smoothScroll 是否有滚动效果
+     */
+    public void scrollToSelectCalendar(Boolean smoothScroll) {
         if (!mDelegate.mSelectedCalendar.isAvailable()) {
             return;
         }
         scrollToCalendar(mDelegate.mSelectedCalendar.getYear(),
                 mDelegate.mSelectedCalendar.getMonth(),
                 mDelegate.mSelectedCalendar.getDay(),
-                false);
+                smoothScroll);
     }
 
     /**

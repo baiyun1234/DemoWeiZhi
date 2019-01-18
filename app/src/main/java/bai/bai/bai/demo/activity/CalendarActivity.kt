@@ -114,7 +114,7 @@ class CalendarActivity : AppCompatActivity(), CalendarView.OnCalendarSelectListe
 
     override fun onClick(v: View?) {
 
-        when(v?.id){
+        when (v?.id) {
             R.id.tv_month_day -> {
                 if (!calendarLayout.isExpand) {
                     calendarLayout.expand(0)
@@ -147,21 +147,11 @@ class CalendarActivity : AppCompatActivity(), CalendarView.OnCalendarSelectListe
             }
 
             R.id.btn_pre -> {
-                calendarView.scrollToPreviousDay()
+                calendarView.scrollToPreviousDay(true)
             }
 
             R.id.btn_next -> {
-                val calendar = calendarView.selectedCalendar
-                calendar.day = calendar.day + 1
-                calendarView.curDay
-                Log.d("baibai", "选中的日期是 ：${calendar.day}")
-//                calendar.time = date
-//                calendar.add(Calendar.DAY_OF_MONTH, 1)
-//                next = calendar.time
-
-                val string = "2016-10-24 21:59"
-                val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm", Locale.getDefault())
-                println(sdf.parse(string))
+                calendarView.scrollToNextDay(true)
             }
 
         }
