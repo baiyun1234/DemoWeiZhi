@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
+import android.widget.ArrayAdapter
 import android.widget.Toast
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.view.calendar.*
@@ -15,7 +16,6 @@ import bai.bai.bai.demo.view.calendar.Calendar
 import bai.bai.bai.demo.view.calendar.custom.circle.CircleMonthView
 import bai.bai.bai.demo.view.calendar.custom.circle.CircleWeekView
 import kotlinx.android.synthetic.main.activity_calendar.*
-import java.text.SimpleDateFormat
 import java.util.*
 
 @SuppressLint("SetTextI18n")
@@ -43,6 +43,10 @@ class CalendarActivity : AppCompatActivity(), CalendarView.OnCalendarSelectListe
         initData()
         initView()
         initListener()
+
+        val list = listOf("1111", "2222", "3333", "4444", "5555", "6666")
+        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1 ,list)
+        lv_list.adapter = adapter
 
     }
 
