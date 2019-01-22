@@ -25,7 +25,6 @@ import bai.bai.bai.demo.R;
 
 /**
  * 星期栏，如果你要使用星期栏自定义，切记XML使用 merge，不要使用LinearLayout
- * Created by huanghaibin on 2017/11/30.
  */
 public class WeekBar extends LinearLayout {
     private CalendarViewDelegate mDelegate;

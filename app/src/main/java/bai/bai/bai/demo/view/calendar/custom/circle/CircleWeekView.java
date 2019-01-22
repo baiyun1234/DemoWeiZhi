@@ -13,7 +13,6 @@ import bai.bai.bai.demo.view.calendar.WeekView;
 
 /**
  * 演示一个变态需求的周视图
- * Created by huanghaibin on 2018/2/9.
  */
 
 public class CircleWeekView extends WeekView {
@@ -144,7 +143,7 @@ public class CircleWeekView extends WeekView {
             canvas.drawCircle(cx, cy, mRadius, mCurrentDayPaint);
         }
 
-        if(hasScheme){
+        if (hasScheme) {
             canvas.drawCircle(x + mItemWidth - mPadding - mCircleRadius / 2, mPadding + mCircleRadius, mCircleRadius, mSchemeBasicPaint);
 
             mTextPaint.setColor(calendar.getSchemeColor());

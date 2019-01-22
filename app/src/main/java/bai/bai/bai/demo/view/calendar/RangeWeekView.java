@@ -21,7 +21,6 @@ import android.view.View;
 
 /**
  * 范围选择月视图
- * Created by huanghaibin on 2018/9/11.
  */
 @SuppressWarnings("unused")
 public abstract class RangeWeekView extends BaseWeekView {

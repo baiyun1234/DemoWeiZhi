@@ -11,7 +11,6 @@ import bai.bai.bai.demo.view.calendar.WeekView;
 
 /**
  * 魅族周视图
- * Created by huanghaibin on 2017/11/29.
  */
 
 public class MeizuWeekView extends WeekView {

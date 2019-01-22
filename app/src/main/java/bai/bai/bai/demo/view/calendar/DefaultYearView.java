@@ -22,7 +22,6 @@ import bai.bai.bai.demo.R;
 
 /**
  * 默认年视图
- * Created by huanghaibin on 2018/10/9.
  */
 
 public class DefaultYearView extends YearView {

@@ -45,7 +45,7 @@ class CalendarActivity : AppCompatActivity(), CalendarView.OnCalendarSelectListe
         initListener()
 
         val list = listOf("1111", "2222", "3333", "4444", "5555", "6666")
-        val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1 ,list)
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, list)
         lv_list.adapter = adapter
 
     }

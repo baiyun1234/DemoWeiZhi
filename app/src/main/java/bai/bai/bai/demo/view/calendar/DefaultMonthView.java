@@ -21,7 +21,6 @@ import android.graphics.Paint;
 
 /**
  * 默认高仿魅族日历布局
- * Created by huanghaibin on 2017/11/15.
  */
 
 public final class DefaultMonthView extends MonthView {
@@ -81,6 +80,7 @@ public final class DefaultMonthView extends MonthView {
 
     /**
      * 获取字体的宽
+     *
      * @param text text
      * @return return
      */

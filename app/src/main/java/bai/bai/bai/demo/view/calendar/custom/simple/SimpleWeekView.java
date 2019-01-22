@@ -11,7 +11,6 @@ import bai.bai.bai.demo.view.calendar.WeekView;
 
 /**
  * 简单周视图
- * Created by huanghaibin on 2017/11/29.
  */
 
 public class SimpleWeekView extends WeekView {
@@ -20,7 +19,7 @@ public class SimpleWeekView extends WeekView {
 
     public SimpleWeekView(Context context) {
         super(context);
-        setLayerType(View.LAYER_TYPE_SOFTWARE,mSelectedPaint);
+        setLayerType(View.LAYER_TYPE_SOFTWARE, mSelectedPaint);
         //4.0以上硬件加速会导致无效
         mSelectedPaint.setMaskFilter(new BlurMaskFilter(25, BlurMaskFilter.Blur.SOLID));
     }

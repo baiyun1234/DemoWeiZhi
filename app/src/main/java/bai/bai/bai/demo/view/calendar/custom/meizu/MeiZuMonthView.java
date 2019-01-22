@@ -11,7 +11,6 @@ import bai.bai.bai.demo.view.calendar.MonthView;
 
 /**
  * 高仿魅族日历布局
- * Created by huanghaibin on 2017/11/15.
  */
 
 public class MeiZuMonthView extends MonthView {

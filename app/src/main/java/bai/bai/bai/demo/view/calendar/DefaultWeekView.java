@@ -21,7 +21,6 @@ import android.graphics.Paint;
 
 /**
  * 默认高仿魅族周视图
- * Created by huanghaibin on 2017/11/29.
  */
 
 public final class DefaultWeekView extends WeekView {
@@ -81,6 +80,7 @@ public final class DefaultWeekView extends WeekView {
 
     /**
      * 获取字体的宽
+     *
      * @param text text
      * @return return
      */

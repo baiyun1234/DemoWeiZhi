@@ -11,7 +11,6 @@ import bai.bai.bai.demo.view.calendar.WeekBar;
 
 /**
  * 自定义英文栏
- * Created by huanghaibin on 2017/11/30.
  */
 
 public class CircleWeekBar extends WeekBar {
@@ -46,7 +45,8 @@ public class CircleWeekBar extends WeekBar {
 
     /**
      * 或者周文本，这个方法仅供父类使用
-     * @param index index
+     *
+     * @param index     index
      * @param weekStart weekStart
      * @return 或者周文本
      */

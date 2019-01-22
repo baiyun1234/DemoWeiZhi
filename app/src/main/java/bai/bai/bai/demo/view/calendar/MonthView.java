@@ -21,7 +21,6 @@ import android.view.View;
 
 /**
  * 月视图基础控件,可自由继承实现
- * Created by huanghaibin on 2017/11/15.
  */
 public abstract class MonthView extends BaseMonthView {
 

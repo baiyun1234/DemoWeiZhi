@@ -29,7 +29,6 @@ import java.util.List;
 
 /**
  * 年视图
- * Created by huanghaibin on 2018/10/9.
  */
 @SuppressWarnings("unused")
 public abstract class YearView extends View {
@@ -262,6 +261,7 @@ public abstract class YearView extends View {
 
     /**
      * 初始化年视图
+     *
      * @param year  year
      * @param month month
      */
@@ -373,8 +373,8 @@ public abstract class YearView extends View {
             return;
         }
         int week = mDelegate.getWeekStart();
-        if(week > 0){
-            week-=1;
+        if (week > 0) {
+            week -= 1;
         }
         int width = (getWidth() - 2 * mDelegate.getYearViewPadding()) / 7;
         for (int i = 0; i < 7; i++) {

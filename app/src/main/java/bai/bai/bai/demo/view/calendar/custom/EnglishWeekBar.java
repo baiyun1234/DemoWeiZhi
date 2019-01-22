@@ -11,7 +11,6 @@ import bai.bai.bai.demo.view.calendar.WeekBar;
 
 /**
  * 自定义英文栏
- * Created by huanghaibin on 2017/11/30.
  */
 
 public class EnglishWeekBar extends WeekBar {

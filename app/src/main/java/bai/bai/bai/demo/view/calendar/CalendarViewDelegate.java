@@ -472,7 +472,7 @@ final class CalendarViewDelegate {
         }
         try {
             mWeekViewClass = TextUtils.isEmpty(mWeekViewClassPath) ?
-                    DefaultWeekView.class :  Class.forName(mWeekViewClassPath);
+                    DefaultWeekView.class : Class.forName(mWeekViewClassPath);
         } catch (Exception e) {
             e.printStackTrace();
         }

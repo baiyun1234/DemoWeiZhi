@@ -170,7 +170,6 @@ public abstract class BaseMonthView extends BaseView {
     }
 
 
-
     @Override
     void updateCurrentDate() {
         if (mItems == null)

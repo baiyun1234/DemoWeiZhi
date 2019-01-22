@@ -13,7 +13,6 @@ import bai.bai.bai.demo.view.calendar.MonthView;
 
 /**
  * 演示一个变态需求的月视图
- * Created by huanghaibin on 2018/2/9.
  */
 
 public class CircleMonthView extends MonthView {
@@ -184,7 +183,7 @@ public class CircleMonthView extends MonthView {
 
             canvas.drawText(calendar.getLunar(), cx, mTextBaseLine + y + mItemHeight / 10,
                     calendar.isCurrentDay() ? mCurDayLunarTextPaint :
-                            calendar.isCurrentMonth() ? !TextUtils.isEmpty(calendar.getSolarTerm()) ? mSolarTermTextPaint  :
+                            calendar.isCurrentMonth() ? !TextUtils.isEmpty(calendar.getSolarTerm()) ? mSolarTermTextPaint :
                                     mCurMonthLunarTextPaint : mOtherMonthLunarTextPaint);
         }
     }
