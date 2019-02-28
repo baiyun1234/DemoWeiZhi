@@ -33,7 +33,8 @@ class SystemBarTintManager(activity: Activity) {
         val decorViewGroup = win.decorView as ViewGroup
         if (VERSION.SDK_INT >= 21) {  //android 5.0以上（可去掉状态栏半透明阴影）
             //两个 flag 要结合使用，表示让应用的主体内容占用系统状态栏的空间
-            val option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            var option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+            //option = View.SYSTEM_UI_FLAG_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE//无时间
             decorViewGroup.systemUiVisibility = option
             win.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             win.statusBarColor = Color.TRANSPARENT

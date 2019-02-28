@@ -121,6 +121,12 @@
             android:layout_height="wrap_content"
             android:text="日历" />
 
+        <Button
+            android:id="@+id/btn_choose_screen_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="屏幕切换" />
+
     </LinearLayout>
 
 </LinearLayout>  

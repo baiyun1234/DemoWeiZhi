@@ -67,6 +67,7 @@
         <activity android:name=".activity.MyFragmentActivity" />
         <activity android:name=".activity.TimeDatePickerActivity" />
         <activity android:name=".activity.CalendarActivity" />
+        <activity android:name=".activity.ScreenChangeActivity" />
     </application>
 
 </manifest>
