@@ -51,4 +51,7 @@ dependencies {
     //EventBus ----- 简化了应用程序内各组件间、组件与后台线程间的通信的事件总线
     compile 'org.greenrobot:eventbus:3.0.0'
 
+    //依赖的module，一般app模块是在最上层
+    implementation project(':baseModule')
+
 }

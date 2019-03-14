@@ -44,11 +44,11 @@
         <receiver android:name=".broadcast.MyBroadcast" />
 
         <activity android:name=".activity.ChooseActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.LoginActivity" />
@@ -68,6 +68,14 @@
         <activity android:name=".activity.TimeDatePickerActivity" />
         <activity android:name=".activity.CalendarActivity" />
         <activity android:name=".activity.ScreenChangeActivity" />
+
+        <activity android:name="bai.bai.bai.demo.baseModule.TestActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
