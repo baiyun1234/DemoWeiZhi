@@ -3,13 +3,13 @@
     package="bai.bai.bai.demo.baseModule">
 
     <application>
-        <!--<activity android:name=".BaseActivity">-->
+        <activity android:name=".TestActivity">
             <!--<intent-filter>-->
                 <!--<action android:name="android.intent.action.MAIN" />-->
 
                 <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
-        <!--</activity>-->
+        </activity>
     </application>
 
 </manifest>

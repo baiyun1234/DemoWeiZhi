@@ -208,4 +208,7 @@
         <item>显示日期范围</item>
     </string-array>
 
+
+    <string name="count_down">倒计时&#160; %1$s s</string>
+
 </resources>

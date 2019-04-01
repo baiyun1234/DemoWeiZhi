@@ -51,6 +51,7 @@ class ChooseActivity : Activity(), View.OnClickListener {
         btn_choose_time_data_picker.setOnClickListener(this)
         btn_choose_calendar.setOnClickListener(this)
         btn_choose_screen_change.setOnClickListener(this)
+        btn_choose_count_down.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -118,6 +119,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_screen_change -> {
                 startActivity(Intent(this, ScreenChangeActivity::class.java))
+            }
+
+            R.id.btn_choose_count_down -> {
+                startActivity(Intent(this, CountDownActivity::class.java))
             }
 
         }
