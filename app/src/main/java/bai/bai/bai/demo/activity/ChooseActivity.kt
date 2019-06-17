@@ -53,6 +53,7 @@ class ChooseActivity : Activity(), View.OnClickListener {
         btn_choose_screen_change.setOnClickListener(this)
         btn_choose_count_down.setOnClickListener(this)
         btn_choose_web_view.setOnClickListener(this)
+        btn_choose_px_to_dp.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -128,6 +129,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_web_view -> {
                 startActivity(Intent(this, WebViewActivity::class.java))
+            }
+
+            R.id.btn_choose_px_to_dp -> {
+                startActivity(Intent(this, PxToDpActivity::class.java))
             }
 
         }
