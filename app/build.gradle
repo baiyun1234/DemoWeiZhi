@@ -12,9 +12,20 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    //签名
+    signingConfigs {
+        cashierxConfig {
+            keyAlias 'MyAlias'//别名
+            keyPassword 'baibai'//密码
+            storeFile file('myKey.jks')//签名文件
+            storePassword 'baibai'//密码
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            signingConfig signingConfigs.cashierxConfig//签名配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
