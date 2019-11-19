@@ -17,8 +17,6 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
         setStatusBar()
         initData()
-        initListener()
-
     }
 
     private fun setStatusBar() {
@@ -32,29 +30,6 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
     private fun initData() {
 
-    }
-
-    private fun initListener() {
-        btn_choose_snap_pay.setOnClickListener(this)
-        btn_choose_location.setOnClickListener(this)
-        btn_choose_ip.setOnClickListener(this)
-        btn_choose_java.setOnClickListener(this)
-        btn_choose_view.setOnClickListener(this)
-        btn_choose_assets_file.setOnClickListener(this)
-        btn_choose_retrofit.setOnClickListener(this)
-        btn_choose_date.setOnClickListener(this)
-        btn_choose_rxjava.setOnClickListener(this)
-        btn_choose_time_zone.setOnClickListener(this)
-        btn_choose_eventbus.setOnClickListener(this)
-        btn_choose_service.setOnClickListener(this)
-        btn_choose_fragment.setOnClickListener(this)
-        btn_choose_time_data_picker.setOnClickListener(this)
-        btn_choose_calendar.setOnClickListener(this)
-        btn_choose_screen_change.setOnClickListener(this)
-        btn_choose_count_down.setOnClickListener(this)
-        btn_choose_web_view.setOnClickListener(this)
-        btn_choose_px_to_dp.setOnClickListener(this)
-        btn_choose_screen_shot.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -138,6 +113,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_screen_shot -> {
                 startActivity(Intent(this, ScreenShotActivity::class.java))
+            }
+
+            R.id.btn_choose_action_bar -> {
+                startActivity(Intent(this, ActionBarActivity::class.java))
             }
 
         }

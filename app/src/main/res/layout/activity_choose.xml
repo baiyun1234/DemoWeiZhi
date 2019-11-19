@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg">
+    android:background="@drawable/login_bg"
+    tools:context=".activity.ChooseActivity">
 
     <LinearLayout
         android:layout_width="0dp"
@@ -14,81 +15,60 @@
 
         <Button
             android:id="@+id/btn_choose_snap_pay"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="SnapPay项目" />
 
         <Button
             android:id="@+id/btn_choose_location"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="获取经纬度" />
 
         <Button
             android:id="@+id/btn_choose_ip"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="获取ip地址" />
 
         <Button
             android:id="@+id/btn_choose_java"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="测试" />
 
         <Button
             android:id="@+id/btn_choose_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="view测试" />
 
         <Button
             android:id="@+id/btn_choose_assets_file"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="打开assets文件" />
 
         <Button
             android:id="@+id/btn_choose_date"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="获取时间" />
 
 
         <Button
             android:id="@+id/btn_choose_time_zone"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="城市与时区" />
 
         <Button
             android:id="@+id/btn_choose_rxjava"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="RxJava" />
 
         <Button
             android:id="@+id/btn_choose_retrofit"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="Retrofit" />
 
         <Button
             android:id="@+id/btn_choose_eventbus"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="EventBus" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -99,66 +79,53 @@
 
         <Button
             android:id="@+id/btn_choose_service"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="服务" />
 
         <Button
             android:id="@+id/btn_choose_fragment"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="fragment" />
 
         <Button
             android:id="@+id/btn_choose_time_data_picker"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="时间选择器" />
 
         <Button
             android:id="@+id/btn_choose_calendar"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="日历" />
 
         <Button
             android:id="@+id/btn_choose_screen_change"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="屏幕切换" />
 
         <Button
             android:id="@+id/btn_choose_count_down"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="倒计时" />
 
         <Button
             android:id="@+id/btn_choose_web_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="WebView" />
 
         <Button
             android:id="@+id/btn_choose_px_to_dp"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="px与dp的转换" />
 
         <Button
             android:id="@+id/btn_choose_screen_shot"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            style="@style/ChooseActivityButtonStyle"
             android:text="截屏" />
+
+        <Button
+            android:id="@+id/btn_choose_action_bar"
+            style="@style/ChooseActivityButtonStyle"
+            android:text="状态栏" />
 
     </LinearLayout>
 

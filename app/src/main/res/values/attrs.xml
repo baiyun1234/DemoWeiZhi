@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="KeyBoardLinearLayout">
-        <attr name="itemHeight" format="dimension"/>//item的行高
-        <attr name="itemTextSize" format="dimension"/>//文字大小
-        <attr name="keyBoardType" format="integer"/>//键盘的类型，不如主界面的键盘和密码的键盘
+        <attr name="itemHeight" format="dimension" />//item的行高
+        <attr name="itemTextSize" format="dimension" />//文字大小
+        <attr name="keyBoardType" format="integer" />//键盘的类型，不如主界面的键盘和密码的键盘
     </declare-styleable>
 
     <!--下面都是日历attr-->
@@ -123,6 +123,16 @@
         </attr>
 
         <attr name="calendar_content_view_id" format="integer" />
+    </declare-styleable>
+
+    <!--标题栏 actionBar-->
+    <declare-styleable name="BaseActionBar">
+        <attr name="title" format="string" />//中间标题
+        <attr name="rightMessage" format="string" />//右侧文字
+        <attr name="isShowRightMessage" format="boolean" />//是否显示右侧文字
+        <attr name="isShowRightIcon" format="boolean" />//是否显示右侧图标
+        <attr name="rightIcon" format="reference" />//右侧图标
+        <attr name="isShowLeftBackIcon" format="boolean" />//是否显示左侧返回按钮
     </declare-styleable>
 
 </resources>

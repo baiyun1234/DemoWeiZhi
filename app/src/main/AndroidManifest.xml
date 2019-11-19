@@ -45,17 +45,12 @@
             android:name=".service.MyIntentService"
             android:exported="false" />
 
-        <receiver android:name=".broadcast.MyBroadcast" />
-
-        <!-- <activity android:name="bai.bai.bai.demo.baseModule.TestActivity"> -->
+        <receiver android:name=".broadcast.MyBroadcast" /> <!-- <activity android:name="bai.bai.bai.demo.baseModule.TestActivity"> -->
         <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
         <!-- </intent-filter> -->
         <!-- </activity> -->
-
         <activity android:name=".activity.ChooseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -85,6 +80,7 @@
         <activity android:name=".activity.WebViewActivity" />
         <activity android:name=".activity.PxToDpActivity" />
         <activity android:name=".activity.ScreenShotActivity" />
+        <activity android:name=".activity.ActionBarActivity" />
     </application>
 
 </manifest>

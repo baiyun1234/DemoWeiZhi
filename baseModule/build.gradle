@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
@@ -29,8 +31,29 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //Kotlin
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //RecyclerView
+    api 'com.android.support:recyclerview-v7:27.1.1'
+
+    //rxJava依赖包 ----- 一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的库
+    api 'io.reactivex.rxjava2:rxjava:2.0.1'
+    api 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    api 'io.reactivex.rxjava2:rxkotlin:2.1.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    // Retrofit库(使用的时候必须添加Okhttp依赖) ----- 网络请求框架
+    api 'com.squareup.retrofit2:retrofit:2.0.2'
+    api 'com.squareup.okhttp3:okhttp:3.1.2'// Okhttp库
+
+    //  FastJson ----- 数据解析
+    api 'com.alibaba:fastjson:1.1.70.android'
+    api 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+
+    //EventBus ----- 简化了应用程序内各组件间、组件与后台线程间的通信的事件总线
+    api 'org.greenrobot:eventbus:3.0.0'
 }
 
-apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-android-extensions'
+
