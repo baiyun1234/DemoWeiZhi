@@ -2,13 +2,13 @@ package bai.bai.bai.demo.activity
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.net.http.SslError
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.webkit.*
 import bai.bai.bai.demo.R
 import kotlinx.android.synthetic.main.activity_web_view.*
-import android.webkit.WebView
-import android.webkit.JsResult
-import android.webkit.WebChromeClient
 
 
 class WebViewActivity : Activity() {
@@ -19,17 +19,69 @@ class WebViewActivity : Activity() {
 
 
         btn_start.setOnClickListener {
-                        web_view.loadUrl("https://www.baidu.com/")
-//            web_view.webChromeClient = myWebChromeClient
+//                        web_view.loadUrl("https://www.baidu.com/")
 
-//            web_view.loadDataWithBaseURL(null
-//                    , "<html><head><title> 欢迎您 </title></head> <body><h2>< img src=\"http://gzfp.baijar.com/Content/ueditor/net/upload/image/20190323/6368893687932093921773267.png\" width=\"100%\" style=\"\" title=\"1.png\"/></p ><p><br/></p ><p>< img src=\"http://gzfp.baijar.com/Content/ueditor/net/upload/image/20190323/6368893687958657262087065.png\" width=\"100%\" style=\"\" title=\"2.png\"/></p ><p>< img src=\"http://gzfp.baijar.com/Content/ueditor/net/upload/image/20190323/6368893687943226348044789.png\" width=\"100%\" title=\"3.png\" style=\"white-space: normal;\"/></h2></body></html>"
-//                    , "text/html"
-//                    , "utf-8"
-//                    , null)
+            val settings = web_view.settings
+            settings.javaScriptEnabled = true
+            settings.domStorageEnabled = true
+            settings.setSupportZoom(false)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                settings.mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+            }
+            settings.loadWithOverviewMode = true
+            settings.blockNetworkImage = false
+            settings.useWideViewPort = true
+            settings.javaScriptCanOpenWindowsAutomatically = true
+            web_view.webViewClient = Client()
+
+                        web_view.loadUrl("https://payin.payserv.net/redirect/wechat_alipay/GjKKa58IyoDcj6U7ftEK3X")
         }
 
     }
+
+    internal inner class Client : WebViewClient() {
+        override fun onPageFinished(view: WebView, url: String) {
+//            super.onPageFinished(view, url)
+            Log.d("WebViewClient","WebViewClient|onPageFinished")
+        }
+
+        override fun shouldOverrideUrlLoading(view: WebView, url: String?): Boolean {
+            Log.d("WebViewClient","WebViewClient|shouldOverrideUrlLoading, url = $url")
+            view.loadUrl(url)
+            return true
+        }
+
+//        override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+//            return false
+//        }
+
+        override fun onReceivedError(view: WebView?, request: WebResourceRequest?, error: WebResourceError?) {
+            super.onReceivedError(view, request, error)
+            Log.d("WebViewClient","WebViewClient|onReceivedError")
+        }
+
+        override fun onReceivedHttpError(view: WebView?, request: WebResourceRequest?, errorResponse: WebResourceResponse?) {
+            super.onReceivedHttpError(view, request, errorResponse)
+            Log.d("WebViewClient","WebViewClient|onReceivedHttpError")
+        }
+
+        override fun onReceivedError(view: WebView?, errorCode: Int, description: String?, failingUrl: String?) {
+            super.onReceivedError(view, errorCode, description, failingUrl)
+            Log.d("WebViewClient","WebViewClient|onReceivedError111|errorCode = $errorCode, description = $description, failingUrl = $failingUrl")
+        }
+
+        override fun onReceivedSslError(view: WebView?, handler: SslErrorHandler?, error: SslError?) {
+            // 校验过程遇到了bug
+            Log.d("WebViewClient","WebViewClient|onReceivedSslError|primaryError = ${error?.primaryError}")
+            if (error?.primaryError == SslError.SSL_INVALID) {
+                handler?.proceed()
+            } else {
+                handler?.cancel()
+            }
+        }
+
+    }
+
 
     private val myWebChromeClient = object : WebChromeClient() {
         //不支持js的alert弹窗，需要自己监听然后通过dialog弹窗
