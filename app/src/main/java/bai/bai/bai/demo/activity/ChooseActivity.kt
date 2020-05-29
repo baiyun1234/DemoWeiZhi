@@ -3,6 +3,7 @@ package bai.bai.bai.demo.activity
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.systembar.SystemBarTintManager
@@ -10,13 +11,30 @@ import kotlinx.android.synthetic.main.activity_choose.*
 
 class ChooseActivity : Activity(), View.OnClickListener {
 
+    private val TAG = "ChooseActivity -> "
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choose)
 
+        Log.d(TAG, "---onCreate()---")
         setStatusBar()
         initData()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d(TAG, "---onResume()---")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "---onStop()---")
+    }
+
+    override fun onDestroy() {
+        Log.d(TAG, "---onDestroy()---")
+        super.onDestroy()
     }
 
     private fun setStatusBar() {
@@ -117,6 +135,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
 
             R.id.btn_choose_action_bar -> {
                 startActivity(Intent(this, ActionBarActivity::class.java))
+            }
+
+            R.id.btn_choose_get_current_activity -> {
+                startActivity(Intent(this, GetCurrentActivityActivity::class.java))
             }
 
         }
