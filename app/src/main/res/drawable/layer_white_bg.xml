@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 阴影层 left top都是阴影层距离内容层的对应方向边距 -->
+    <item
+        android:left="1dp"
+        android:top="1dp">
+        <shape>
+            <solid android:color="#22000000" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <!-- 内容层 bottom right都是内容层距离阴影层的距离-->
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="1dp">
+        <shape>
+            <solid android:color="#fff" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+</layer-list>

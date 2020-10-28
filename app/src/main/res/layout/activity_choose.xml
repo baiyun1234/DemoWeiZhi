@@ -134,4 +134,22 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_choose_point"
+            style="@style/ChooseActivityButtonStyle"
+            android:text="悬浮球" />
+
+        <Button
+            android:id="@+id/btn_choose_shade"
+            style="@style/ChooseActivityButtonStyle"
+            android:text="阴影按钮" />
+
+    </LinearLayout>
+
 </LinearLayout>  

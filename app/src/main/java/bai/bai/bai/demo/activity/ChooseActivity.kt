@@ -141,6 +141,14 @@ class ChooseActivity : Activity(), View.OnClickListener {
                 startActivity(Intent(this, GetCurrentActivityActivity::class.java))
             }
 
+            R.id.btn_choose_point -> {
+                startActivity(Intent(this, PointActivity::class.java))
+            }
+
+            R.id.btn_choose_shade -> {
+                startActivity(Intent(this, ShadeButtonActivity::class.java))
+            }
+
         }
     }
 

@@ -80,6 +80,8 @@
         <activity android:name=".activity.ScreenShotActivity" />
         <activity android:name=".activity.ActionBarActivity" />
         <activity android:name=".activity.GetCurrentActivityActivity" />
+        <activity android:name=".activity.ShadeButtonActivity" />
+        <activity android:name=".activity.PointActivity" />
     </application>
 
 </manifest>
