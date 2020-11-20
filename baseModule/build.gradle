@@ -54,6 +54,9 @@ dependencies {
 
     //EventBus ----- 简化了应用程序内各组件间、组件与后台线程间的通信的事件总线
     api 'org.greenrobot:eventbus:3.0.0'
+
+    //悬浮球
+    api 'com.github.yhaolpz:FloatWindow:1.0.9'
 }
 
 
