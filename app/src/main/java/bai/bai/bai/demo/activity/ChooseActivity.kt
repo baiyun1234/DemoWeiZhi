@@ -149,6 +149,14 @@ class ChooseActivity : Activity(), View.OnClickListener {
                 startActivity(Intent(this, ShadeButtonActivity::class.java))
             }
 
+            R.id.btn_choose_camera -> {
+                startActivity(Intent(this, CameraActivity::class.java))
+            }
+
+            R.id.btn_choose_dynamic_view -> {
+                startActivity(Intent(this, DynamicViewActivity::class.java))
+            }
+
         }
     }
 

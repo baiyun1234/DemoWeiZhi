@@ -150,6 +150,16 @@
             style="@style/ChooseActivityButtonStyle"
             android:text="阴影按钮" />
 
+        <Button
+            android:id="@+id/btn_choose_camera"
+            style="@style/ChooseActivityButtonStyle"
+            android:text="相机" />
+
+        <Button
+            android:id="@+id/btn_choose_dynamic_view"
+            style="@style/ChooseActivityButtonStyle"
+            android:text="动态生成控件" />
+
     </LinearLayout>
 
 </LinearLayout>  

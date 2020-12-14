@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.DynamicViewActivity">
+
+    <bai.bai.bai.demo.view.BaseActionBar
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:title="动态控件" />
+
+    <LinearLayout
+        android:id="@+id/ll_dynamic_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:background="#6f30"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_get"
+        style="@style/ChooseActivityButtonStyle"
+        android:text="获取" />
+
+</LinearLayout>

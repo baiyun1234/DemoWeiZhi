@@ -44,4 +44,5 @@ dependencies {
 
 
     implementation project(':baseModule')
+    implementation project(':dynamicviewmodule')
 }
