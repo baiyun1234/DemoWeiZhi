@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ListView
+        android:id="@+id/lv_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_select_btn_light_gray_bg"
+        android:divider="@null"
+        android:paddingLeft="10px"
+        android:paddingTop="4px"
+        android:paddingRight="10px"
+        android:paddingBottom="26px" />
+
+</LinearLayout>

@@ -7,6 +7,7 @@ import android.util.Log
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.dynamicviewmodule.view.DynamicTextView
 import bai.bai.bai.demo.dynamicviewmodule.bean.DynamicBean
+import bai.bai.bai.demo.dynamicviewmodule.view.DynamicChoose
 import bai.bai.bai.demo.dynamicviewmodule.view.DynamicDate
 import bai.bai.bai.demo.dynamicviewmodule.view.DynamicSwitch
 import bai.bai.bai.demo.view.BaseActionBar
@@ -59,11 +60,21 @@ class DynamicViewActivity : AppCompatActivity(), BaseActionBar.ActionBarClickLis
         val dynamicSwitch = DynamicSwitch(mContext, dynamicBeanSwitch)
         ll_dynamic_view.addView(dynamicSwitch)
 
+        //下拉选择框
+        val dynamicBeanChoose = DynamicBean()
+        dynamicBeanChoose.label = "ID Type"
+        dynamicBeanChoose.fieldName = "idType"
+        dynamicBeanChoose.fieldValue = "ID Card,Passport"
+        Log.d(TAG, "修改前：$dynamicBeanChoose")
+        val dynamicChoose = DynamicChoose(mContext, dynamicBeanChoose)
+        ll_dynamic_view.addView(dynamicChoose)
+
 
         btn_get.setOnClickListener {
             Log.d(TAG, "Name修改后：$dynamicBeanName")
             Log.d(TAG, "Expired date修改后：$dynamicBeanDate")
             Log.d(TAG, "Currently employed?修改后：$dynamicBeanSwitch")
+            Log.d(TAG, "ID Type修改后：$dynamicBeanChoose")
         }
 
     }
