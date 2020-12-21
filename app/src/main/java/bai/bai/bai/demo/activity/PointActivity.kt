@@ -2,11 +2,12 @@ package bai.bai.bai.demo.activity
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.BounceInterpolator
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.utils.ToastUtil
 import com.yhao.floatwindow.*

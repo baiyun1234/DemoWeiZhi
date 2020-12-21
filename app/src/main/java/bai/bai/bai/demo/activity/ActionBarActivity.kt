@@ -2,7 +2,7 @@ package bai.bai.bai.demo.activity
 
 import android.app.Activity
 import android.os.Bundle
-import android.support.v4.view.WindowCompat
+//import android.support.v4.view.WindowCompat
 import android.view.Window
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.view.BaseActionBar

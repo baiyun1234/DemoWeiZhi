@@ -9,8 +9,9 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
+//import android.support.v4.app.ActivityCompat
 import android.util.Log
+import androidx.core.app.ActivityCompat
 
 //@SuppressLint("MissingPermission")
 class LocationHaveNetUtils private constructor(private val mContext: Context) {
@@ -18,8 +19,8 @@ class LocationHaveNetUtils private constructor(private val mContext: Context) {
     private var locationManager: LocationManager? = null
     private var locationProvider: String? = null
     private var location: Location? = null
-//    private val TAG = "LocationHaveNetUtils ->"
-    private val TAG = "LocationHaveNetUtils -> baibai"
+    private val TAG = "LocationHaveNetUtils ->"
+//    private val TAG = "LocationHaveNetUtils -> baibai"
     private var logStr: String? = null
 
     /**

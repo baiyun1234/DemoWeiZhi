@@ -5,11 +5,14 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.RecyclerView.State
-import android.support.v7.widget.StaggeredGridLayoutManager
+//import android.support.v7.widget.GridLayoutManager
+//import android.support.v7.widget.RecyclerView
+//import android.support.v7.widget.RecyclerView.State
+//import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 
 /**
  * recyclerView边界线的绘制
@@ -23,11 +26,11 @@ class RecyclerDividerGridItemDecoration(context: Context) : RecyclerView.ItemDec
         a.recycle()
     }
 
-    override fun onDrawOver(c: Canvas, parent: RecyclerView, state: State?) {
-        drawHorizontal(c, parent)
-        drawVertical(c, parent)
-
-    }
+//    override fun onDrawOver(c: Canvas, parent: RecyclerView, state: RecyclerView.State?) {
+//        drawHorizontal(c, parent)
+//        drawVertical(c, parent)
+//
+//    }
 
     private fun getSpanCount(parent: RecyclerView): Int {
         // 列数
@@ -133,10 +136,10 @@ class RecyclerDividerGridItemDecoration(context: Context) : RecyclerView.ItemDec
         return false
     }
 
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State?) {
-        outRect.set(0, 0, mDivider!!.intrinsicWidth,
-                mDivider.intrinsicHeight)
-    }
+//    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State?) {
+//        outRect.set(0, 0, mDivider!!.intrinsicWidth,
+//                mDivider.intrinsicHeight)
+//    }
 
     companion object {
 

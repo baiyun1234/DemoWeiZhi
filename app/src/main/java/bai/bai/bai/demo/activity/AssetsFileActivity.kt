@@ -1,7 +1,7 @@
 package bai.bai.bai.demo.activity
 
 import android.app.Activity
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View

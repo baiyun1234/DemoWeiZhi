@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:text="拍照" />
 
-    <!--    <androidx.camera.view.PreviewView-->
-    <!--        android:id="@+id/preview_view"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent" />-->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 </LinearLayout>

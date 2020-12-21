@@ -1,8 +1,9 @@
 package bai.bai.bai.demo.activity
 
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.view.timepicker.CustomDatePicker
 import kotlinx.android.synthetic.main.activity_time_date_picker.*

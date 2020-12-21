@@ -1,9 +1,11 @@
 package com.snappay.cashier.bizmodule.main.recycler
 
-import android.support.v4.view.GestureDetectorCompat
-import android.support.v7.widget.RecyclerView
+//import android.support.v4.view.GestureDetectorCompat
+//import android.support.v7.widget.RecyclerView
 import android.view.GestureDetector
 import android.view.MotionEvent
+import androidx.core.view.GestureDetectorCompat
+import androidx.recyclerview.widget.RecyclerView
 import bai.bai.bai.demo.recycler.adapter.MoreAdapter
 
 /**

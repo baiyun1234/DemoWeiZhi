@@ -2,14 +2,17 @@ package bai.bai.bai.demo.view
 
 import android.content.Context
 import android.os.Build
-import android.support.annotation.RequiresApi
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.helper.ItemTouchHelper
+//import android.support.annotation.RequiresApi
+//import android.support.v7.widget.RecyclerView
+//import android.support.v7.widget.helper.ItemTouchHelper
 import android.view.*
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.RelativeLayout
+import androidx.annotation.RequiresApi
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.recycler.adapter.MoreAdapter
 import com.snappay.cashier.basemodule.bean.MoreChildBean

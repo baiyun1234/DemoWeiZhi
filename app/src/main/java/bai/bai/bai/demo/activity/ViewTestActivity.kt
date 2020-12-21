@@ -2,11 +2,12 @@ package bai.bai.bai.demo.activity
 
 import android.animation.ObjectAnimator
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.animation.*
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.anim.MyInterpolator
 import bai.bai.bai.demo.view.MyAnimation

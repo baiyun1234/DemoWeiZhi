@@ -1,8 +1,9 @@
 package bai.bai.bai.demo.activity
 
 import android.inputmethodservice.KeyboardView
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.view.KeyBoardLinearLayout
 import kotlinx.android.synthetic.main.activity_java_view_test.*

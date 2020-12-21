@@ -1,7 +1,8 @@
 package com.snappay.cashier.bizmodule.main.recycler
 
-import android.support.v7.widget.RecyclerView
+//import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.snappay.cashier.basemodule.bean.MoreGroupBean
 
 

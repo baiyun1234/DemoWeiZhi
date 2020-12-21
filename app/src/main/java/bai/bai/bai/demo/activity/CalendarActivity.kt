@@ -1,15 +1,17 @@
 package bai.bai.bai.demo.activity
 
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.DialogInterface
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
+//import android.support.v7.app.AlertDialog
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.view.calendar.*
 import bai.bai.bai.demo.view.calendar.Calendar

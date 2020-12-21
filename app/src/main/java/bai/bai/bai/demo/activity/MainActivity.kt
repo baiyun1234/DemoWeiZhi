@@ -4,9 +4,10 @@ import android.app.Activity
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
-import android.support.annotation.RequiresApi
+//import android.support.annotation.RequiresApi
 import android.view.View
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.kt.KeyBoardLinearLayout

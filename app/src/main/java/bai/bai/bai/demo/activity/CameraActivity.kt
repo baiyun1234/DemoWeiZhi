@@ -1,7 +1,8 @@
 package bai.bai.bai.demo.activity
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import kotlinx.android.synthetic.main.activity_camera.*
 

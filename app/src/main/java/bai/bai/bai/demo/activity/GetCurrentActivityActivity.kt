@@ -1,8 +1,9 @@
 package bai.bai.bai.demo.activity
 
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.R
 import bai.bai.bai.demo.utils.DeviceUtil2
 import kotlinx.android.synthetic.main.activity_get_current_activity.*

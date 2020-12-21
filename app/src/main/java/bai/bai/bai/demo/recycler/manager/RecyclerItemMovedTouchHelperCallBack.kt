@@ -4,10 +4,13 @@ import android.app.Service
 import android.content.Context
 import android.graphics.Color
 import android.os.Vibrator
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.helper.ItemTouchHelper
+//import android.support.v7.widget.GridLayoutManager
+//import android.support.v7.widget.RecyclerView
+//import android.support.v7.widget.helper.ItemTouchHelper
 import android.util.Log
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 
 import java.util.Collections
 
@@ -94,29 +97,29 @@ class RecyclerItemMovedTouchHelperCallBack(adapter: RecyclerViewAdapter<*, *>, p
                 //获取系统震动服务
                 val vib = context.getSystemService(Service.VIBRATOR_SERVICE) as Vibrator
                 //震动70毫秒
-                vib.vibrate(100)
+//                vib.vibrate(100)
                 super.onSelectedChanged(viewHolder, actionState)
             }
         }
     }
 
-    /**
-     * 拖拽完成时调用
-     */
-    override fun clearView(recyclerView: RecyclerView?, viewHolder: RecyclerView.ViewHolder) {
-        if (viewHolder.adapterPosition > 0 && viewHolder.adapterPosition == adapter!!.getChildItemForPosition(viewHolder.adapterPosition)) {
-            viewHolder.itemView.setBackgroundColor(Color.parseColor("#ffffffff"))
-            super.clearView(recyclerView, viewHolder)
-            if (onDragListener != null) {
-                onDragListener!!.onFinishDrag()
-            }
-        } else {
-            if (onDragListener != null) {
-                onDragListener!!.onFinishDrag()
-                super.clearView(recyclerView, viewHolder)
-            }
-        }
-    }
+//    /**
+//     * 拖拽完成时调用
+//     */
+//    override fun clearView(recyclerView: RecyclerView?, viewHolder: RecyclerView.ViewHolder) {
+//        if (viewHolder.adapterPosition > 0 && viewHolder.adapterPosition == adapter!!.getChildItemForPosition(viewHolder.adapterPosition)) {
+//            viewHolder.itemView.setBackgroundColor(Color.parseColor("#ffffffff"))
+//            super.clearView(recyclerView, viewHolder)
+//            if (onDragListener != null) {
+//                onDragListener!!.onFinishDrag()
+//            }
+//        } else {
+//            if (onDragListener != null) {
+//                onDragListener!!.onFinishDrag()
+//                super.clearView(recyclerView, viewHolder)
+//            }
+//        }
+//    }
 
     override fun isLongPressDragEnabled(): Boolean {
         return true

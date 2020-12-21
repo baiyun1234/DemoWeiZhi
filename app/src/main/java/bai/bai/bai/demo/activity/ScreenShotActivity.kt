@@ -1,7 +1,7 @@
 package bai.bai.bai.demo.activity
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
 import bai.bai.bai.demo.R
@@ -10,6 +10,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Environment
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import bai.bai.bai.demo.utils.ToastUtil
 import java.io.File
 import java.io.FileOutputStream

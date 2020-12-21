@@ -1,8 +1,9 @@
 package bai.bai.bai.demo.view
 
-import android.support.design.widget.Snackbar
+//import android.support.design.widget.Snackbar
 import android.view.View
 import android.widget.Toast
+import com.google.android.material.snackbar.Snackbar
 
 /**
  * Created by daigaokai on 2018/4/26.

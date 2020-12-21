@@ -2,11 +2,12 @@ package bai.bai.bai.demo.activity
 
 import android.app.Activity
 import android.os.Build
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.annotation.RequiresApi
+//import android.support.annotation.RequiresApi
 import android.util.Log
+import androidx.annotation.RequiresApi
 import bai.bai.bai.demo.R
 
 class ScreenChangeActivity : Activity() {

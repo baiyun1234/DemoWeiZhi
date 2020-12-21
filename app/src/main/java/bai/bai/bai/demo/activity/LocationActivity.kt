@@ -4,8 +4,8 @@ import android.Manifest
 import android.app.Activity
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
+//import android.support.v4.app.ActivityCompat
+//import android.support.v4.content.ContextCompat
 import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
@@ -13,6 +13,8 @@ import bai.bai.bai.demo.R
 import bai.bai.bai.demo.location.LocationUtils
 import kotlinx.android.synthetic.main.activity_location.*
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import bai.bai.bai.demo.location.LocationHaveNetUtils
 
 /**
