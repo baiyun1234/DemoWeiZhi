@@ -5,11 +5,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import bai.bai.bai.demo.R
-import bai.bai.bai.demo.dynamicviewmodule.view.DynamicTextView
 import bai.bai.bai.demo.dynamicviewmodule.bean.DynamicBean
-import bai.bai.bai.demo.dynamicviewmodule.view.DynamicChoose
-import bai.bai.bai.demo.dynamicviewmodule.view.DynamicDate
-import bai.bai.bai.demo.dynamicviewmodule.view.DynamicSwitch
+import bai.bai.bai.demo.dynamicviewmodule.view.*
 import bai.bai.bai.demo.view.BaseActionBar
 import kotlinx.android.synthetic.main.activity_dynamic_view.*
 
@@ -69,6 +66,14 @@ class DynamicViewActivity : AppCompatActivity(), BaseActionBar.ActionBarClickLis
         val dynamicChoose = DynamicChoose(mContext, dynamicBeanChoose)
         ll_dynamic_view.addView(dynamicChoose)
 
+        //照相机
+        val dynamicBeanCamera = DynamicBean()
+        dynamicBeanCamera.label = "Primary document"
+        dynamicBeanCamera.fieldName = "primary"
+        dynamicBeanCamera.description = "(ID Card/Driving License/Passport)"
+        Log.d(TAG, "修改前：$dynamicBeanCamera")
+        val dynamicCamera = DynamicCamera(mContext, dynamicBeanCamera)
+        ll_dynamic_view.addView(dynamicCamera)
 
         btn_get.setOnClickListener {
             Log.d(TAG, "Name修改后：$dynamicBeanName")

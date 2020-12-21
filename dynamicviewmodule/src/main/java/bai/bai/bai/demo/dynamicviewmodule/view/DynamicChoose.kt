@@ -13,7 +13,7 @@ import bai.bai.bai.demo.dynamicviewmodule.bean.DynamicBean
 import kotlin.collections.ArrayList
 
 /**
- * 单行文本
+ * 下拉列表
  */
 class DynamicChoose(context: Context) : LinearLayout(context) {
 

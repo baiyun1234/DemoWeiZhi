@@ -1,2 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="bai.bai.bai.demo.dynamicviewmodule" />
+    package="bai.bai.bai.demo.dynamicviewmodule">
+
+    <application>
+        <activity android:name=".activity.DynamicCameraActivity" />
+    </application>
+
+</manifest>
