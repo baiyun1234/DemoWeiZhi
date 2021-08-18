@@ -160,6 +160,11 @@
             style="@style/ChooseActivityButtonStyle"
             android:text="动态生成控件" />
 
+        <Button
+            android:id="@+id/btn_choose_nfc"
+            style="@style/ChooseActivityButtonStyle"
+            android:text="NFC" />
+
     </LinearLayout>
 
 </LinearLayout>  

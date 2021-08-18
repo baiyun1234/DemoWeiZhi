@@ -157,6 +157,10 @@ class ChooseActivity : Activity(), View.OnClickListener {
                 startActivity(Intent(this, DynamicViewActivity::class.java))
             }
 
+            R.id.btn_choose_nfc -> {
+                startActivity(Intent(this, NfcReadActivity::class.java))
+            }
+
         }
     }
 
